@@ -1,0 +1,42 @@
+header {
+  background-color: #799daf;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+
+  font-family: poppins;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+header {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+}
+.logo {
+  cursor: pointer;
+}
+
+.btn-area {
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  margin: 2%;
+  border-radius: 5px;
+  background: #006c87;
+}
+.btn-area:hover {
+  color: #fff !important;
+}

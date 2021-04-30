@@ -1,0 +1,11 @@
+footer {
+  /* position: sticky;
+  left: 0; */
+  bottom: 0;
+  width: 100%;
+  background-color: #007BFF!important;
+  color: white;
+  text-align: center;
+  font-weight: 300 bolder;
+  margin-top: 50px;
+}
