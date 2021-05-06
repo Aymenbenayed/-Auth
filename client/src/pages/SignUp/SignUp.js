@@ -62,7 +62,7 @@ const SignUp = ({ history }) => {
 
                 <MDBInput label="Pseudo" icon="user-edit"
                 type="text"
-                name="pseudo"
+                name="lastName"
                   onChange={handleChange} />
 
                 {/* email */}

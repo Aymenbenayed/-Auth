@@ -2,11 +2,11 @@ const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const salt = bcrypt.genSaltSync(10);
 const jwt = require("jsonwebtoken");
-
+//const sendConfirmationEmail = require("../services/Emails")
 exports.Signup = async (req, res) => {
   try {
     //   req.body
-    const { name, lastName, email, phone, password } = req.body;
+    const { name, lastName, email, phone, password ,role } = req.body;
 
     // check if the email is not found in the database
     const FoundUser = await User.findOne({ email });
@@ -17,12 +17,14 @@ exports.Signup = async (req, res) => {
       });
       return;
     }
-    const newUser = new User({ name, lastName, email, phone, password });
+    
 
+    const newUser = new User({ name, lastName, email, phone, password ,role });
     // hash the password
     const hashedpassword = bcrypt.hashSync(password, salt);
     newUser.password = hashedpassword;
-
+    
+    /* sendConfirmationEmail(newUser); */
     // create a key using json webtoken
     const token = jwt.sign(
       {

@@ -40,3 +40,11 @@ header {
 .btn-area:hover {
   color: #fff !important;
 }
+
+.role{
+  display: flex;
+  justify-content: space-around;
+}
+.name-nav{
+font-size: 20px;
+}
